@@ -1,3 +1,5 @@
+APPLEUTE INTERN WEBSITE
+
 Node - Create following APIs
 GET -> Customer GET -> Orders (A customer can have N number of Orders) GET -> Products (An order can have N number of products, please maintain SKU id to identify identical products)
 POST/PATCH -> Products update (Updating products based on ID, A product can have N number of quantity) POST/PATCH -> Order Update
