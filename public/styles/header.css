@@ -1,0 +1,202 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.student {
+    min-height: 60rem;
+    padding-top: 4rem;
+}
+
+.intro {
+    position: relative;
+    top: 40%;
+    right: -5rem;
+    color: rgba(99, 41, 206, 0.877);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: 600;
+}
+
+header {
+    background-color: rgb(115, 75, 224);
+    max-height: 5rem;
+    box-shadow: 2px 2px 5px 0 rgba(111, 109, 236, 0.685);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header ul {
+    margin: 0.3rem 2rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+header li a {
+    display: block;
+    padding: 20px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    font-size: 1.5rem;
+}
+
+header li a:hover {
+    color: #42f7cf;
+    transform: scale(1.2);
+}
+
+header .logo {
+    display: block;
+    float: left;
+    height: 5em;
+    margin: 0 2em;
+    background: inherit;
+}
+
+/* menu */
+
+header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    background-color: inherit;
+}
+
+/* menu icon */
+
+header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    overflow-y: hidden;
+    padding: 2rem 2rem;
+    position: relative;
+    user-select: none;
+    left: 25%;
+}
+
+header .menu-icon .navicon {
+    background: rgb(155, 155, 155);
+    display: block;
+    height: 4px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 26px;
+    margin: 7px auto 0 1rem;
+}
+
+header .menu-icon .navicon:before, header .menu-icon .navicon:after {
+    background: rgb(51, 20, 138);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+header .menu-btn {
+    display: none;
+}
+
+header .menu-btn:checked~.menu {
+    max-height: 25rem;
+}
+
+header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media (min-width: 65rem) {
+    header li {
+        float: left;
+        overflow: hidden;
+    }
+    header li a {
+        padding: 20px 30px;
+    }
+    header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    header .menu-icon {
+        display: none;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.but {
+    border-radius: 2px;
+    border-style: solid;
+    padding: 0.4rem 1rem;
+    margin-top: 0.6rem;
+    margin-left: 2rem;
+}
+
+.but:hover {
+    transform: none;
+    text-decoration: none;
+}
+
+hr {
+    max-width: 80%;
+    margin-left: 10%;
+    height: 10px;
+    border: solid 2px;
+    background-color: black;
+    border-color: black;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    background-color: inherit;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 rgb(115, 75, 224);
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(rgb(115, 75, 224), rgb(23, 19, 247));
+    -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: -webkit-linear-gradient(#511fdaea, #7779ec);
+    -webkit-text-fill-color: transparent;
+}
+
+.my-button-design{
+    margin: 20px;
+    font-size: large;
+}

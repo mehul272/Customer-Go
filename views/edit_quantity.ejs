@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/styles/select.css">
+
+    <title>
+        EDIT THE Product
+    </title>
+    <!-- <link rel="stylesheet" href="css/datastyles.css"> -->
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>
+            EDIT Product
+        </h2>
+        <form action="/update_product" method="post">
+            <input type="hidden" value="<%= user._id %>" name="id">
+
+            <div class="form-group">
+                <label for="phone">Qunatity:</label>
+                <input type="text" class="form-control" id="pwd" placeholder="Enter Quantity"
+                    value="<%= user.quantity %>" name="quantity" required>
+
+                    <select id="order" name="status" style="width:200px; margin: 2rem 0 2rem 0; height: 3rem;">
+                        <option value="Preprocessing">Preprocessing</option>
+                        <option value="Dispatched">Dispatched</option>
+                        <option value="Shiped">Shiped</option>
+                        <option value="Delivery">Delivery</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

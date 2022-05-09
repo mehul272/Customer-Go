@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+.student {
+    min-height: 60rem;
+    padding-top: 4rem;
+}
+
+.intro {
+    position: relative;
+    top: 40%;
+    right: -5rem;
+    color: rgba(99, 41, 206, 0.877);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: 600;
+}
+
+.btn-lg {
+    border-radius: 0;
+    background-color: none;
+    border: solid 2 px white;
+    margin-top: 1rem;
+}
+

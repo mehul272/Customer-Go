@@ -1,0 +1,417 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.intro {
+    position: relative;
+    top: 35%;
+    right: -3rem;
+    color: rgb(62, 23, 172);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4.2rem;
+    line-height: 4.9rem;
+    font-weight: 700;
+}
+
+.myButton {
+    box-shadow: 0px 0px 6px 0px rgb(115, 75, 224);
+    background-color: rgb(115, 75, 224);
+    border-radius: 2px;
+    position: relative;
+    top: 40%;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #210e8d;
+    left: 2rem;
+}
+
+.myButton:hover {
+    background-color: rgb(12, 240, 248);
+    box-shadow: 0px 0px 6px 0px rgb(28, 215, 221);
+    text-decoration: none;
+}
+
+header {
+    background-color: rgb(115, 75, 224);
+    max-height: 5rem;
+    box-shadow: 2px 2px 5px 0 rgba(111, 109, 236, 0.685);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header ul {
+    margin: 0.3rem 2rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+header li a {
+    display: block;
+    padding: 20px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    font-size: 1.5rem;
+}
+
+header li a:hover {
+    color: #42f7cf;
+    transform: scale(1.2);
+}
+
+header .logo {
+    display: block;
+    float: left;
+    height: 5em;
+    margin: 0 2em;
+    background: inherit;
+}
+
+/* menu */
+
+header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    background-color: inherit;
+}
+
+/* menu icon */
+
+header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    overflow-y: hidden;
+    padding: 2rem 2rem;
+    position: relative;
+    user-select: none;
+    left: 25%;
+}
+
+header .menu-icon .navicon {
+    background: rgb(155, 155, 155);
+    display: block;
+    height: 4px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 26px;
+    margin: 7px auto 0 1rem;
+}
+
+header .menu-icon .navicon:before, header .menu-icon .navicon:after {
+    background: rgb(51, 20, 138);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+header .menu-btn {
+    display: none;
+}
+
+header .menu-btn:checked~.menu {
+    max-height: 25rem;
+}
+
+header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before, header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+@media (min-width: 65rem) {
+    header li {
+        float: left;
+        overflow: hidden;
+    }
+    header li a {
+        padding: 20px 30px;
+    }
+    header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    header .menu-icon {
+        display: none;
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.but {
+    border-radius: 2px;
+    border-style: solid;
+    padding: 0.3rem 1rem;
+    margin-top: 0.6rem;
+    margin-left: 1rem;
+}
+
+.but:hover {
+    transform: none;
+    text-decoration: none;
+}
+
+hr {
+    max-width: 80%;
+    margin-left: 10%;
+    height: 2px;
+    border: solid 1px;
+    background-color: black;
+}
+
+.team {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+}
+
+.our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: rgb(115, 75, 224);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.our-team .picture {
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #26e2f0fd;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+    height: 100%;
+}
+
+.our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #0de2f1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+    box-shadow: 0 0 0 14px rgba(96, 64, 184, 0.753);
+    transform: scale(0.7);
+}
+
+.our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #ecf2f7;
+    text-transform: capitalize;
+}
+
+.our-team .name {
+    display: block;
+    font-size: 1.5rem;
+    color: #31def5;
+    text-transform: capitalize;
+}
+
+.our-team .name:hover {
+    transform: scale(1.1);
+}
+
+.contact-form {
+    background: rgb(115, 75, 224);
+    margin-top: 7%;
+    margin-bottom: 5%;
+    width: 80%;
+}
+
+.contact-form .form-control {
+    border-radius: 0.1rem;
+}
+
+.contact-image {
+    text-align: center;
+}
+
+.contact-image img {
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -5%;
+    transform: rotate(35deg);
+}
+
+.contact-form form {
+    padding: 10%;
+}
+
+.contact-form form .row {
+    margin-bottom: -7%;
+}
+
+.contact-form h3 {
+    margin-bottom: 7%;
+    margin-top: -10%;
+    text-align: center;
+    color: #fdfeff;
+    font-size: 2rem;
+}
+
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    padding: 1.5%;
+    background: #f85b6b;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.btnContactSubmit {
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: rgb(115, 75, 224);
+    border: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    background-color: inherit;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 rgb(115, 75, 224);
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(rgb(115, 75, 224), rgb(63, 238, 229));
+    -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: -webkit-linear-gradient(#511fdaea, #7779ec);
+    -webkit-text-fill-color: transparent;
+}
+
+#container0 {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: linear-gradient(165deg, rgb(255, 255, 255) 0%, rgb(242, 238, 245) 40%, rgb(255, 255, 255) 98%, rgb(245, 239, 239) 100%);
+    position: relative;
+}
+
+.loader {}
+
+.loader:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border-bottom: 0 solid #5e2b2b05;
+    box-shadow: 0 -10px 20px 20px #6830c4a4 inset, 0 -5px 15px 10px #5b36ccb7 inset, 0 -2px 5px #4017b3ea inset, 0 -3px 2px #4b39ebc5 inset, 0 2px 0px #3523d3, 0 2px 3px #1926d8, 0 5px 5px #1533da90, 0 10px 15px #391be69a, 0 10px 20px 20px #293df140;
+    filter: blur(2px);
+    animation: 1.5s rotate linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.center {
+    position: absolute;
+    top: 10rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.load {
+    display: block;
+    position: absolute;
+    top: 6rem;
+    left: 25%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5rem;
+    color: rgb(115, 75, 224);
+}
+
+.my-roww{
+    justify-content: center;
+}
